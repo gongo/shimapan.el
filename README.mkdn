@@ -1,0 +1,26 @@
+# shimapan.el
+
+縞パン
+
+## Overview
+
+Inspired by [osyo-manga/unite-shimapan](https://github.com/osyo-manga/unite-shimapan)
+
+## Requirement
+
+- [anything.el](http://www.emacswiki.org/emacs/Anything)
+
+## Usage
+
+`M-x shimapan:mounting` を実行すると、装着します。
+
+![装着](https://cacoo.com/diagrams/FJotOVvgyWRL9dRp-02AF7.png)
+
+`M-x shimapan:anything` でライン毎に選択できますが、特になにもできません。
+
+![anything](https://cacoo.com/diagrams/FJotOVvgyWRL9dRp-A70EE.png)
+
+
+## LICENSE
+
+This project is licensed under the MAHALO License. See LICENSE for details.
