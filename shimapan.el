@@ -86,16 +86,3 @@ Example:
   (interactive)
   (shimapan:make)
   (switch-to-buffer shimapan:var-buffer-name))
-
-(defun shimapan:anything ()
-  (interactive)
-  (anything
-   '((name . "Shimapan")
-     (init . (lambda ()
-               (unless (anything-candidate-buffer)
-                 (save-selected-window
-                   (shimapan:make))
-                 (anything-candidate-buffer (get-buffer shimapan:var-buffer-name)))))
-     (candidates-in-buffer)
-     (get-line . buffer-substring)
-     (action . message))))
