@@ -1,4 +1,4 @@
-(eval-when-compile (require 'cl))
+(require 'cl-lib)
 
 (defconst shimapan:var-buffer-name "*Shimapan*"
   "shimapan を表示させるバッファ名")
@@ -26,7 +26,7 @@
 (defun shimapan:waist-width ()
   "現在の window に適した shimapan の腰部分の長さを返す"
   (let ((w (- (window-width) shimapan:var-waist-padding)))
-    (when (evenp w) (decf w))
+    (when (cl-evenp w) (decf w))
     (if (< w 0) 0 w) ))
 
 (defun shimapan:height (width)
@@ -44,7 +44,7 @@ Example:
   (shimapan:height 4)
     ;; => nil
 "
-  (if (or (< width 1) (evenp width)) nil
+  (if (or (< width 1) (cl-evenp width)) nil
     (let ((h 1))
       (while (/= width 1)
         (incf h)
